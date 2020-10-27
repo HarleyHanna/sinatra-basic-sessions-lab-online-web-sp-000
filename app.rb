@@ -3,7 +3,11 @@ require_relative 'config/environment'
 class App < Sinatra::Base
   
   get '/' do
-    er :index
-  end 
+    erb :index
+  end
+  
+  get '/checkout' do
+    session = params[:item]
+  end
   
 end
